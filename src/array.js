@@ -36,4 +36,9 @@ export default class _Array {
     array.splice(-n, n)
     return array
   }
+
+  // _.head(array): Gets the first element of array.
+  static head(array) {
+    return array[0]
+  }
 }

@@ -35,7 +35,7 @@ describe('_Array.drop', () => {
   })
 })
 
-describe.only('_Array.dropRight', () => {
+describe('_Array.dropRight', () => {
   it('Creates a slice of array with n elements dropped from the end.', function() {
     expect(_Array.dropRight([1, 2, 3], 2)).to.deep.equal([1])
   })
@@ -49,6 +49,16 @@ describe.only('_Array.dropRight', () => {
   })
 
   it('Returns the full array when n is 0.', function() {
-    expect(_Array.dropRight([1, 2, 3], 0)).to.deep.equal([1, 2, 3])    
+    expect(_Array.dropRight([1, 2, 3], 0)).to.deep.equal([1, 2, 3])
+  })
+})
+
+describe.only('_Array.head', () => {
+  it('Gets the first element of array.', function() {
+    expect(_Array.head([1, 2, 3])).to.equal(1)
+  })
+
+  it('Returns undefined if array is empty.', function() {
+    expect(_Array.head([])).to.equal(undefined)
   })
 })
