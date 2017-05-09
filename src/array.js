@@ -30,4 +30,10 @@ export default class _Array {
     array.splice(0, n)
     return array
   }
+
+  // _.dropRight(array, [n=1]): Creates a slice of array with n elements dropped from the end.
+  static dropRight(array, n=1) {
+    array.splice(-n, n)
+    return array
+  }
 }
