@@ -13,4 +13,10 @@ export default class _Math {
     roundedDecimal /= (10 ** precision)
     return roundedDecimal
   }
+
+  // _.divide(dividend, divisor): Divides two numbers.
+  static divide(dividend, divisor) {
+    let quotient = dividend/divisor
+    return quotient
+  }
 }

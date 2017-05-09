@@ -7,7 +7,7 @@ describe('_Math.add', () => {
   })
 })
 
-describe.only('_Math.ceil', () => {
+describe('_Math.ceil', () => {
   it('Computes number rounded up to precision.', function() {
     expect(_Math.ceil(6.004, 2)).to.equal(6.01)
   })
@@ -18,5 +18,11 @@ describe.only('_Math.ceil', () => {
 
   it('Takes a negative integer and rounds to corresponding place.', function() {
     expect(_Math.ceil(6040, -2)).to.equal(6100)
+  })
+})
+
+describe.only('_Math.divide', () => {
+  it('Divides two numbers.', function() {
+    expect(_Math.divide(6, 4)).to.equal(1.5)
   })
 })
