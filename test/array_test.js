@@ -19,9 +19,36 @@ describe('_Array.compact', () => {
 
 describe('_Array.drop', () => {
   it('Creates a slice of array with n elements dropped from the beginning.', function() {
-    expect(_Array.drop([1, 2, 3])).to.deep.equal([2, 3])
     expect(_Array.drop([1, 2, 3], 2)).to.deep.equal([3])
+  })
+
+  it('Takes 1 as the default value for n', function() {
+    expect(_Array.drop([1, 2, 3])).to.deep.equal([2, 3])
+  })
+
+  it('Returns an empty array when n is greater than the length of array.', function() {
     expect(_Array.drop([1, 2, 3], 5)).to.deep.equal([])
+  })
+
+  it('Returns the full array when n is 0.', function() {
     expect(_Array.drop([1, 2, 3], 0)).to.deep.equal([1, 2, 3])
+  })
+})
+
+describe.only('_Array.dropRight', () => {
+  it('Creates a slice of array with n elements dropped from the end.', function() {
+    expect(_Array.dropRight([1, 2, 3], 2)).to.deep.equal([1])
+  })
+
+  it('Takes 1 as the default value for n.', function() {
+    expect(_Array.dropRight([1, 2, 3])).to.deep.equal([1, 2])
+  })
+
+  it('Returns an empty array when n is greater than the length of array.', function() {
+    expect(_Array.dropRight([1, 2, 3], 5)).to.deep.equal([])
+  })
+
+  it('Returns the full array when n is 0.', function() {
+    expect(_Array.dropRight([1, 2, 3], 0)).to.deep.equal([1, 2, 3])    
   })
 })
