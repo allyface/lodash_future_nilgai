@@ -19,4 +19,12 @@ export default class _Math {
     let quotient = dividend/divisor
     return quotient
   }
+
+  // _.floor(number, [precision=0]): Computes number rounded down to precision.
+  static floor(number, precision=0) {
+    number *= (10**precision)
+    let roundedDecimal = Math.floor(number)
+    roundedDecimal /= (10**precision)
+    return roundedDecimal
+  }
 }
