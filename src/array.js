@@ -24,4 +24,10 @@ export default class _Array {
     }
     return compactArray
   }
+
+  // _.drop(array, [n=1]): Creates a slice of array with n elements dropped from the beginning.
+  static drop(array, n=1) {
+    array.splice(0, n)
+    return array
+  }
 }

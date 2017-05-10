@@ -16,3 +16,12 @@ describe('_Array.compact', () => {
     expect(_Array.compact([0, 1, false, 2, '', 3])).to.deep.equal([1, 2, 3])
   })
 })
+
+describe('_Array.drop', () => {
+  it('Creates a slice of array with n elements dropped from the beginning.', function() {
+    expect(_Array.drop([1, 2, 3])).to.deep.equal([2, 3])
+    expect(_Array.drop([1, 2, 3], 2)).to.deep.equal([3])
+    expect(_Array.drop([1, 2, 3], 5)).to.deep.equal([])
+    expect(_Array.drop([1, 2, 3], 0)).to.deep.equal([1, 2, 3])
+  })
+})
