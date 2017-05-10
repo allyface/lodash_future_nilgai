@@ -53,7 +53,7 @@ describe('_Array.dropRight', () => {
   })
 })
 
-describe.only('_Array.head', () => {
+describe('_Array.head', () => {
   it('Gets the first element of array.', function() {
     expect(_Array.head([1, 2, 3])).to.equal(1)
   })
