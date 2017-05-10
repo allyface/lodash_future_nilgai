@@ -2,8 +2,7 @@ export default class _Math {
 
   // _.add(augend, addend): Adds two numbers
   static add(augend, addend) {
-    let sum = augend + addend
-    return sum
+    return augend + addend
   }
 
   // _.ceil(number, [precision=0]): Computes number rounded up to precision.
@@ -16,8 +15,8 @@ export default class _Math {
 
   // _.divide(dividend, divisor): Divides two numbers.
   static divide(dividend, divisor) {
-    let quotient = dividend/divisor
-    return quotient
+    return dividend/divisor
+
   }
 
   // _.floor(number, [precision=0]): Computes number rounded down to precision.
@@ -41,5 +40,13 @@ export default class _Math {
       }
     }
     return maxValue
+  }
+
+  // _.mean(array): Computes the mean of the values in array.
+  static mean(array) {
+    let sum = array.reduce(
+    (a, b) => a + b,
+    0)
+    return sum/array.length
   }
 }
