@@ -41,12 +41,18 @@ describe('_Math.floor', () => {
   })
 })
 
-describe.only('_Math.max', () => {
+describe('_Math.max', () => {
   it('Computes the maximum value of array.', function() {
     expect(_Math.max([4, 2, 8, 6])).to.equal(8)
   })
 
   it('If array is empty or falsey, undefined is returned.', function() {
     expect(_Math.max([])).to.equal(undefined)
+  })
+})
+
+describe('_Math.mean', () => {
+  it('Computes the mean of the values in array.', function() {
+    expect(_Math.mean([4, 2, 8, 6])).to.equal(5)
   })
 })
