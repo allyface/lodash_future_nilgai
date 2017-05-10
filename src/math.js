@@ -27,4 +27,19 @@ export default class _Math {
     roundedDecimal /= (10**precision)
     return roundedDecimal
   }
+
+  // _.max(array): Computes the maximum value of array. If array is empty or falsey, undefined is returned.
+  static max(array) {
+    let maxValue = 0
+    if (array == false) {
+      return undefined
+    } else {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] > maxValue) {
+          maxValue = array[i]
+        }
+      }
+    }
+    return maxValue
+  }
 }

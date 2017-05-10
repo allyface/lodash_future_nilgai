@@ -27,7 +27,7 @@ describe('_Math.divide', () => {
   })
 })
 
-describe.only('_Math.floor', () => {
+describe('_Math.floor', () => {
   it('Computes number rounded down to precision.', function() {
     expect(_Math.floor(0.046, 2)).to.equal(0.04)
   })
@@ -38,5 +38,15 @@ describe.only('_Math.floor', () => {
 
   it('Takes a negative integer for precision and rounds to a corresponding place.', function() {
     expect(_Math.floor(4060, -2)).to.equal(4000)
+  })
+})
+
+describe.only('_Math.max', () => {
+  it('Computes the maximum value of array.', function() {
+    expect(_Math.max([4, 2, 8, 6])).to.equal(8)
+  })
+
+  it('If array is empty or falsey, undefined is returned.', function() {
+    expect(_Math.max([])).to.equal(undefined)
   })
 })
