@@ -49,4 +49,19 @@ export default class _Math {
     0)
     return sum/array.length
   }
+
+  // _.min(array): Computes the minimum value of array. If array is empty or falsey, undefined is returned.
+  static min(array) {
+    let minValue = Infinity
+    if (array == false) {
+      return undefined
+    } else {
+      for (let value of array) {
+        if (value < minValue) {
+          minValue = value
+        }
+      }
+    }
+    return minValue
+  }
 }

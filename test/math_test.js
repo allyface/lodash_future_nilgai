@@ -56,3 +56,13 @@ describe('_Math.mean', () => {
     expect(_Math.mean([4, 2, 8, 6])).to.equal(5)
   })
 })
+
+describe.only('_Math.min', () => {
+  it('Computes the minimum value of array.', function() {
+    expect(_Math.min([4, 2, 8, 6])).to.equal(2)
+  })
+
+  it('If array is empty or falsey, undefined is returned.', function() {
+    expect(_Math.min([])).to.equal(undefined)
+  })
+})
