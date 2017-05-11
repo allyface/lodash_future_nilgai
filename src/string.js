@@ -19,4 +19,12 @@ export default class _String {
   static lowerFirst(str) {
     return str.charAt(0).toLowerCase() + str.slice(1)
   }
+  static repeat(string, num) {
+    if (num > 0){
+      return string.repeat(num)
+    }
+      else {
+        return ""
+      }
+  }
 }

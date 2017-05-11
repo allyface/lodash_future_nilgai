@@ -19,11 +19,23 @@ describe('_String.lowerCase', () => {
   })
 })
 
-describe.only('_String.lowerFirst', () => {
+describe('_String.lowerFirst', () => {
   it('Converts the first letter of a string to lowercase', function () {
     expect(_String.lowerFirst('Fred')).to.equal('fred')
   })
   it('Converts the first letter of a string to lowercase', function() {
     expect(_String.lowerFirst('FRED')).to.equal('fRED')
   })
+})
+
+describe.only('_String.repeat', () => {
+    it('repeats the given string n times', function() {
+      expect(_String.repeat('*', 3)).to.equal('***')
+    })
+    it('repeats the given string x times', function() {
+      expect(_String.repeat('abc', 2)).to.equal('abcabc')
+    })
+    it('repats the given string y times', function() {
+      expect(_String.repeat('abc', 0)).to.equal('')
+    })
 })
