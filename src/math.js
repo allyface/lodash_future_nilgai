@@ -64,4 +64,9 @@ export default class _Math {
     }
     return minValue
   }
+
+  // _.multiply(multiplier, multiplicand): Multiply two numbers.
+  static multiply(multiplier, multiplicand) {
+    return multiplier * multiplicand
+  }
 }

@@ -57,12 +57,18 @@ describe('_Math.mean', () => {
   })
 })
 
-describe.only('_Math.min', () => {
+describe('_Math.min', () => {
   it('Computes the minimum value of array.', function() {
     expect(_Math.min([4, 2, 8, 6])).to.equal(2)
   })
 
   it('If array is empty or falsey, undefined is returned.', function() {
     expect(_Math.min([])).to.equal(undefined)
+  })
+})
+
+describe.only('_Math.multiply', () => {
+  it('Multiplies two numbers.', function() {
+    expect(_Math.multiply(6, 4)).to.equal(24)
   })
 })
