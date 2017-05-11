@@ -62,3 +62,15 @@ describe('_Array.head', () => {
     expect(_Array.head([])).to.equal(undefined)
   })
 })
+
+describe('_Array.join', () => {
+  it('Converts all elements in array into a string seperated by seperator', function() {
+    expect(_Array.join(['a', 'b', 'c'], '~')).to.equal('a~b~c')
+  })
+})
+
+describe('_Array.last', () => {
+  it('Gets the last element of an array.', function() {
+    expect(_Array.last([1, 2, 3])).to.deep.equal(3)
+  })
+})
