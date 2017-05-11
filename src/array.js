@@ -42,16 +42,26 @@ export default class _Array {
     return array[0]
   }
 
-  //_.join(), Converts elements in array into a string seperated by seperator
-  static join(array, seperator='~') {
+  //_.join(array, [separator=',']): Converts all elements in array into a string separated by separator.
+  static join(array, separator='~') {
     let result = ''
     for (let i = 0; i < array.length - 1; i++) {
-      result = result + array[i] + seperator
+      result = result + array[i] + separator
     }
     result = result + array[array.length - 1]
     return result
   }
+
+  // _.last(array): Gets the last element of array.
   static last(array) {
     return array.pop()
   }
+
+  // _.concat(array, [values]): Creates a new array concatenating array with any additional arrays and/or values.
+  static concat(array, values) {
+    values = Array.from(arguments)
+    values = Array.prototype.concat(...values)
+    return values
+  }
+
 }
