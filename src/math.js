@@ -69,4 +69,12 @@ export default class _Math {
   static multiply(multiplier, multiplicand) {
     return multiplier * multiplicand
   }
+
+  // _.round(number, [precision=0]): Computes number rounded to precision.
+  static round(number, precision=0) {
+    number *= (10**precision)
+    let roundedDecimal = Math.round(number)
+    roundedDecimal /= (10**precision)
+    return roundedDecimal
+  }
 }
