@@ -69,7 +69,7 @@ describe('_Array.join', () => {
   })
 })
 
-describe.only('_Array.last', () => {
+describe('_Array.last', () => {
   it('Gets the last element of an array.', function() {
     expect(_Array.last([1, 2, 3])).to.deep.equal(3)
   })
