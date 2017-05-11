@@ -4,7 +4,6 @@ export default class _String {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
   }
 
-
   static lowerCase(str) {
     str = str.replace(/\W/g, ' ')
              .replace(/_/g, ' ')
@@ -14,7 +13,10 @@ export default class _String {
   		  str = str.slice(0, i + 1) + ' ' + str.slice(i + 1)
   		  return str.toLowerCase()
   		            .trim()
-	  }
-	}
-}
+  	  }
+  	}
+  }
+  static lowerFirst(str) {
+    return str.charAt(0).toLowerCase() + str.slice(1)
+  }
 }
