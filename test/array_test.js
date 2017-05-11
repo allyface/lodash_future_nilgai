@@ -63,14 +63,14 @@ describe('_Array.head', () => {
   })
 })
 
-// describe('_Array.pull', () => {
-//   it('Removes all given values from array using SameValueZero for equality comparisons.', function() {
-//     expect(_Array.pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c')).to.deep.equal(['b', 'b'])
-//   })
-// })
-
-describe.only('_Array.join', () => {
+describe('_Array.join', () => {
   it('Converts all elements in array into a string seperated by seperator', function() {
     expect(_Array.join(['a', 'b', 'c'], '~')).to.equal('a~b~c')
+  })
+})
+
+describe.only('_Array.last', () => {
+  it('Gets the last element of an array.', function() {
+    expect(_Array.last([1, 2, 3])).to.deep.equal(3)
   })
 })
