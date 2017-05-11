@@ -11,7 +11,7 @@ describe('_Array.chunk', () => {
   })
 })
 
-describe.only('_Array.compact', () => {
+describe('_Array.compact', () => {
   it('Creates an array with all falsey values removed.', function() {
     expect(_Array.compact([0, 1, false, 2, '', 3])).to.deep.equal([1, 2, 3])
   })
