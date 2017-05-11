@@ -41,4 +41,18 @@ export default class _Array {
   static head(array) {
     return array[0]
   }
+//_.pull(array), removes all given values from array
+// static pull(array, values) {
+//
+
+  //_.join(), Converts elements in array into a string seperated by seperator
+  static join(array, seperator='~') {
+    let result = ''
+    for (let i = 0; i < array.length - 1; i++) {
+      result = result + array[i] + seperator
+
+    }
+    result = result + array[array.length - 1]
+    return result
+  }
 }

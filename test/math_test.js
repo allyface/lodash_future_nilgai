@@ -41,7 +41,7 @@ describe('_Math.floor', () => {
   })
 })
 
-describe.only('_Math.max', () => {
+describe('_Math.max', () => {
   it('Computes the maximum value of array.', function() {
     expect(_Math.max([4, 2, 8, 6])).to.equal(8)
   })
