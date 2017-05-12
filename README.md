@@ -38,6 +38,8 @@
 - .repeat
 - .trim
 - .upperCase
+- .upperFirst
+- .toUpper
 
 # Common JS Utility Functions - Lodash
 

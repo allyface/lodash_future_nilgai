@@ -10,6 +10,7 @@ export default class _String {
     string = string.replace(/\W/g, ' ')
              .replace(/_/g, ' ')
     for(let i = 0; i < string.length; i++) {
+      //change to smaller functions
       if ((	string.charAt(i) === string.charAt(i).toLowerCase()) &&
       (string.charAt(i + 1) === string.charAt(i + 1).toUpperCase())) {
         string = string.slice(0, i + 1) + ' ' + string.slice(i + 1)
@@ -25,7 +26,7 @@ export default class _String {
   }
 
 //_.repeat([string=''], [n=1]): Repeats the given string n times.
-  static repeat(string = '', n = 1) {
+  static repeat(string = '', n = 1) {//dont use repeat in function
     if (n > 0){
       return string.repeat(n)
     } else {
@@ -39,25 +40,36 @@ export default class _String {
   }
 
   //_.trim([string=''], [chars=whitespace]): Removes leading and trailing whitespace and special characters
-  static trim(string, char) {
-    string = string.replace(/[^a-zA-Z ]/g, '')
+  static trim(string = '', char = ' ') {
+    char = /[^a-zA-Z ]/g
+    string = string.replace(char, '')
     return string.trim()
   }
 
   //_.upperCase([string='']); Converts string as space seperated words to upperCase
-  static upperCase(str) {
-    str = str.replace(/\W/g, ' ')
+  static upperCase(string = '') {
+    string = string.replace(/\W/g, ' ')
           .replace(/_/g, ' ')
-    for(let i = 0; i < str.length; i++) {
-      if ((	str.charAt(i) === str.charAt(i).toLowerCase()) &&
-    (str.charAt(i + 1) === str.charAt(i + 1).toUpperCase())) {
-        str = str.slice(0, i + 1) + ' ' + str.slice(i + 1)
-        return str.toUpperCase()
+    for(let i = 0; i < string.length; i++) {
+      if ((	string.charAt(i) === string.charAt(i).toLowerCase()) &&
+    (string.charAt(i + 1) === string.charAt(i + 1).toUpperCase())) {
+        string = string.slice(0, i + 1) + ' ' + string.slice(i + 1)
+        return string.toUpperCase()
               .trim()
       }
     }
   }
   static upperFirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
+  }
+  static toUpper(string) {
+    for(let i = 0; i < string.length; i++) {
+      if ((	string.charAt(i) === string.charAt(i).toLowerCase()) &&
+        (string.charAt(i + 1) === string.charAt(i + 1).toUpperCase())) {
+        string = string.slice(0, i + 1)  + string.slice(i + 1)
+        return string.toUpperCase()
+                  .trim()
+      }
+    }
   }
 }
