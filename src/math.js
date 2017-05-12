@@ -6,7 +6,7 @@ export default class _Math {
   }
 
   // _.ceil(number, [precision=0]): Computes number rounded up to precision.
-  static ceil(number, precision=0) {
+  static ceil(number, precision = 0) {
     number *= (10 ** precision)
     let roundedDecimal = Math.ceil(number)
     roundedDecimal /= (10 ** precision)
@@ -21,9 +21,9 @@ export default class _Math {
 
   // _.floor(number, [precision=0]): Computes number rounded down to precision.
   static floor(number, precision=0) {
-    number *= (10**precision)
+    number *= (10 ** precision)
     let roundedDecimal = Math.floor(number)
-    roundedDecimal /= (10**precision)
+    roundedDecimal /= (10 ** precision)
     return roundedDecimal
   }
 

@@ -10,6 +10,7 @@ export default class _String {
     string = string.replace(/\W/g, ' ')
              .replace(/_/g, ' ')
     for(let i = 0; i < string.length; i++) {
+      //change to smaller functions
       if ((	string.charAt(i) === string.charAt(i).toLowerCase()) &&
       (string.charAt(i + 1) === string.charAt(i + 1).toUpperCase())) {
         string = string.slice(0, i + 1) + ' ' + string.slice(i + 1)
@@ -25,7 +26,7 @@ export default class _String {
   }
 
 //_.repeat([string=''], [n=1]): Repeats the given string n times.
-  static repeat(string = '', n = 1) {
+  static repeat(string = '', n = 1) {//dont use repeat in function
     if (n > 0){
       return string.repeat(n)
     } else {
@@ -60,5 +61,15 @@ export default class _String {
   }
   static upperFirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
+  }
+  static toUpper(string) {
+    for(let i = 0; i < string.length; i++) {
+      if ((	string.charAt(i) === string.charAt(i).toLowerCase()) &&
+        (string.charAt(i + 1) === string.charAt(i + 1).toUpperCase())) {
+        string = string.slice(0, i + 1)  + string.slice(i + 1)
+        return string.toUpperCase()
+                  .trim()
+      }
+    }
   }
 }
