@@ -100,4 +100,9 @@ export default class _Array {
     array.shift()
     return array
   }
+
+  // _.take(array, [n=1]): Creates a slice of array with n elements taken from the beginning.
+  static take(array, n = 1) {
+    return array.slice(0, n)
+  }
 }

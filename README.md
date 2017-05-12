@@ -16,6 +16,7 @@
 - .initial
 - .nth
 - .tail
+- .take
 
 ### math.js
 - .add
