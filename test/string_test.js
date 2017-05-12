@@ -7,7 +7,7 @@ describe('_String.capitalize', () => {
   })
 })
 
-describe('_String.lowerCase', () => {
+describe.only('_String.lowerCase', () => {
   it('Converts string as space seperated words, to lower case', function() {
     expect(_String.lowerCase('---Foo-Bar---')).to.equal('foo bar')
   })
@@ -45,3 +45,15 @@ describe('_String.replace', () => {
     expect(_String.replace('Hi Fred', 'Fred', 'Barney')).to.equal('Hi Barney')
   })
 })
+
+// describe.only('_String.snakeCase', () => {
+//   it('Converts string to sankeCase', function() {
+//     expect(_String.snakeCase('Foo Bar')).to.equal('foo_bar')
+//   })
+//   it('Places _ between foo and bar, making it snakeCase', function() {
+//     expect(_String.snakeCase('fooBar')).to.equal('foo_bar')
+//   })
+//   it('Removes -, replacing it with _, making it snakeCase', function() {
+//     expect(_String.snakeCase('---FOO-BAR---')).to.equal('foo_bar')
+//   })
+// })
