@@ -75,3 +75,15 @@ describe('StringClass.upperFirst', () => {
     expect(StringClass.upperFirst('FRED')).to.equal('FRED')
   })
 })
+
+describe('_String.toUpper', () => {
+  it('Converts string as a whole to uppercase', function() {
+    expect(_String.toUpper('---foo-bar-')).to.equal('---FOO-BAR---')
+  })
+  it('Convets string as a whole to uppercase', function() {
+    expect(_String.toUpper('fooBar')).to.equal('FOOBAR')
+  })
+  it('Coverts a string a whole to uppercase', function() {
+    expect(_String.toUpper('___foo_bar___')).to.equal('___FOO_BAR___')
+  })
+})
