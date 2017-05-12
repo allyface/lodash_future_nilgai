@@ -1,9 +1,11 @@
 export default class _String {
 
+  //converts the first letter of a string to uppercase
   static capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
   }
 
+  //converts string as space seperated words, to lowercase
   static lowerCase(str) {
     str = str.replace(/\W/g, ' ')
              .replace(/_/g, ' ')
@@ -17,15 +19,22 @@ export default class _String {
     }
   }
 
+  //converts the first letter of string to lowercase
   static lowerFirst(str) {
     return str.charAt(0).toLowerCase() + str.slice(1)
   }
 
+//repeats the given string n times
   static repeat(string, num) {
     if (num > 0){
       return string.repeat(num)
     } else {
       return ''
     }
+  }
+
+  //replaces matches for pattern in string
+  static replace(string, pattern, replacement) {
+    return string.replace(pattern, replacement)
   }
 }
