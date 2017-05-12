@@ -2,8 +2,7 @@ export default class _Math {
 
   // _.add(augend, addend): Adds two numbers
   static add(augend, addend) {
-    let sum = augend + addend
-    return sum
+    return augend + addend
   }
 
   // _.ceil(number, [precision=0]): Computes number rounded up to precision.
@@ -16,8 +15,8 @@ export default class _Math {
 
   // _.divide(dividend, divisor): Divides two numbers.
   static divide(dividend, divisor) {
-    let quotient = dividend/divisor
-    return quotient
+    return dividend/divisor
+
   }
 
   // _.floor(number, [precision=0]): Computes number rounded down to precision.
@@ -41,5 +40,41 @@ export default class _Math {
       }
     }
     return maxValue
+  }
+
+  // _.mean(array): Computes the mean of the values in array.
+  static mean(array) {
+    let sum = array.reduce(
+    (a, b) => a + b,
+    0)
+    return sum/array.length
+  }
+
+  // _.min(array): Computes the minimum value of array. If array is empty or falsey, undefined is returned.
+  static min(array) {
+    let minValue = Infinity
+    if (array == false) {
+      return undefined
+    } else {
+      for (let value of array) {
+        if (value < minValue) {
+          minValue = value
+        }
+      }
+    }
+    return minValue
+  }
+
+  // _.multiply(multiplier, multiplicand): Multiply two numbers.
+  static multiply(multiplier, multiplicand) {
+    return multiplier * multiplicand
+  }
+
+  // _.round(number, [precision=0]): Computes number rounded to precision.
+  static round(number, precision=0) {
+    number *= (10**precision)
+    let roundedDecimal = Math.round(number)
+    roundedDecimal /= (10**precision)
+    return roundedDecimal
   }
 }

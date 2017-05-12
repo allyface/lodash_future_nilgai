@@ -50,3 +50,39 @@ describe('_Math.max', () => {
     expect(_Math.max([])).to.equal(undefined)
   })
 })
+
+describe('_Math.mean', () => {
+  it('Computes the mean of the values in array.', function() {
+    expect(_Math.mean([4, 2, 8, 6])).to.equal(5)
+  })
+})
+
+describe('_Math.min', () => {
+  it('Computes the minimum value of array.', function() {
+    expect(_Math.min([4, 2, 8, 6])).to.equal(2)
+  })
+
+  it('If array is empty or falsey, undefined is returned.', function() {
+    expect(_Math.min([])).to.equal(undefined)
+  })
+})
+
+describe('_Math.multiply', () => {
+  it('Multiplies two numbers.', function() {
+    expect(_Math.multiply(6, 4)).to.equal(24)
+  })
+})
+
+describe('_Math.round', () => {
+  it('Computes number rounded to precision.', function() {
+    expect(_Math.round(4.006, 2)).to.equal(4.01)
+  })
+
+  it('Takes 0 as the default for precision, rounding to the nearest integer.', function() {
+    expect(_Math.round(4.006)).to.equal(4)
+  })
+
+  it('Takes a negative integer for precision and rounds to a corresponding place.', function() {
+    expect(_Math.round(4060, -2)).to.equal(4100)
+  })
+})
