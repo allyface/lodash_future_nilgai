@@ -77,4 +77,9 @@ export default class _Math {
     roundedDecimal /= (10**precision)
     return roundedDecimal
   }
+
+  // _.subtract(minuend, subtrahend): Subtract two numbers.
+  static subtract(minuend, subtrahend) {
+    return minuend - subtrahend
+  }
 }
