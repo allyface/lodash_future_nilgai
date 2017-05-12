@@ -1,4 +1,4 @@
-export default class _Array {
+export default class ArrayClass {
 
   // _.chunk(array, [size=1]): Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
   static chunk(array, size=1) {
@@ -74,7 +74,7 @@ export default class _Array {
     return array.reduce(function(flattenedArr, nestedArr) {
       return flattenedArr.concat(
         Array.isArray(nestedArr)
-          ? _Array.flattenDeep(nestedArr)
+          ? ArrayClass.flattenDeep(nestedArr)
           : nestedArr
       )
     }, [])

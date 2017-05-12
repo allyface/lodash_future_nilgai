@@ -1,4 +1,4 @@
-export default class _Math {
+export default class MathClass {
 
   // _.add(augend, addend): Adds two numbers
   static add(augend, addend) {
@@ -81,5 +81,14 @@ export default class _Math {
   // _.subtract(minuend, subtrahend): Subtract two numbers.
   static subtract(minuend, subtrahend) {
     return minuend - subtrahend
+  }
+
+  // _.sum(array): Computes the sum of the values in an array.
+  static sum(array) {
+    let solution = 0
+    for (let i in array) {
+      solution += array[i]
+    }
+    return solution
   }
 }
