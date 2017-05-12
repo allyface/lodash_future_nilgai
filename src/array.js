@@ -85,4 +85,13 @@ export default class _Array {
     array.pop()
     return array
   }
+
+  // _.nth(array, [n=0]): Gets the element at index n of array. If n is negative, the nth element from the end is returned.
+  static nth(array, n) {
+    if(Math.sign(n) === -1) {
+      return array[array.length + n]
+    } else {
+      return array[n]
+    }
+  }
 }

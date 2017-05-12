@@ -94,8 +94,20 @@ describe('_Array.flattenDeep', () => {
   })
 })
 
-describe.only('_Array.initial', () => {
+describe('_Array.initial', () => {
   it('Gets all but the last element of array', function() {
     expect(_Array.initial([1, 2, 3])).to.deep.equal([1, 2])
+  })
+})
+
+describe('_Array.nth', () => {
+  let array = ['a', 'b', 'c', 'd']
+
+  it('Gets the element at index n of array', function() {
+    expect(_Array.nth(array, 1)).to.equal('b')
+  })
+
+  it('If n is negative, the nth element from the end is returned', function() {
+    expect(_Array.nth(array, -2)).to.equal('c')
   })
 })
