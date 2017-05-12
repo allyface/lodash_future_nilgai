@@ -1,5 +1,34 @@
 # lodash_future_nilgai
 
+## Method locations
+
+### array.js
+- .chunk
+- .compact
+- .drop
+- .dropRight
+- .head
+- .join
+- .last
+- .concat
+
+### math.js
+- .add
+- .ceil
+- .divide
+- .floor
+- .max
+- .mean
+- .min
+- .multiply
+- .rounded
+
+### string.js
+- .capitalize
+- .lowerCase
+- .lowerFirst
+- .repeat
+
 # Common JS Utility Functions - Lodash
 
 ## Challenge Rubric
@@ -65,10 +94,10 @@ This goal is the sister goal of [Common JS Utility Functions - Underscore](202-C
 - [x] All code is written with ES2015.
 - [ ] Includes a README listing each method written and which file it is in.
 - [x] Code uses a linter and there are no linting errors.
-- [ ] Code is well tested and all tests are passing.
+- [x] Code is well tested and all tests are passing.
 - [x] All dependencies are properly declared in `package.json`.
 - [x] All major features are added via pull requests with a clear description and concise commit messages.
-- [ ] Every pull request has been reviewed by at least one other person.
+- [x] Every pull request has been reviewed by at least one other person.
 - [x] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
 ### Stretch
