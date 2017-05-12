@@ -46,14 +46,23 @@ describe('_String.replace', () => {
   })
 })
 
-// describe.only('_String.snakeCase', () => {
-//   it('Converts string to sankeCase', function() {
-//     expect(_String.snakeCase('Foo Bar')).to.equal('foo_bar')
-//   })
-//   it('Places _ between foo and bar, making it snakeCase', function() {
-//     expect(_String.snakeCase('fooBar')).to.equal('foo_bar')
-//   })
-//   it('Removes -, replacing it with _, making it snakeCase', function() {
-//     expect(_String.snakeCase('---FOO-BAR---')).to.equal('foo_bar')
-//   })
-// })
+describe('_String.trim', () => {
+  it('removes leading and trailing whitespace from string', function() {
+    expect(_String.trim('   abc   ')).to.equal('abc')
+  })
+  it('Removes trailing and leading characters from a string', function() {
+    expect(_String.trim('-_-abc-_-', '_-')).to.equal('abc')
+  })
+})
+
+describe.only('_String.upperCase', () => {
+  it('Converts string as space seperated words to uppercase', function() {
+    expect(_String.upperCase('---foo-bar---')).to.equal('FOO BAR')
+  })
+  it('Converts string as space seperated words to uppercase', function() {
+    expect(_String.upperCase('fooBar')).to.equal('FOO BAR')
+  })
+  it('Converts string as space seperated words to uppercase', function() {
+    expect(_String.upperCase('___foo_bar___')).to.equal('FOO BAR')
+  })
+})
