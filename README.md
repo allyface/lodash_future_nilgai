@@ -30,6 +30,7 @@
 - .multiply
 - .round
 - .subtract
+- .sum
 
 ### string.js
 - .capitalize
@@ -99,7 +100,7 @@ This goal is the sister goal of [Common JS Utility Functions - Underscore](202-C
 
 ## Specifications
 
-- [ ] Tests and correct implementations exist for **32** (not all) utility functions from the Lodash library.
+- [x] Tests and correct implementations exist for **32** (not all) utility functions from the Lodash library.
 - [x] Functions are organized into files with the same names as the function groups from Lodash (e.g. "Array", "Collection", "Lang").
 - [x] All code is written with ES2015.
 - [x] Includes a README listing each method written and which file it is in.

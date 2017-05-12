@@ -1,4 +1,4 @@
-export default class _String {
+export default class StringClass {
 
   //_.capitalize([string='']): Converts the first character of string to upper case and the remaining to lower case.
   static capitalize(string = '') {
