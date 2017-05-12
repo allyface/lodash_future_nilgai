@@ -7,7 +7,7 @@ describe('_String.capitalize', () => {
   })
 })
 
-describe.only('_String.lowerCase', () => {
+describe('_String.lowerCase', () => {
   it('Converts string as space seperated words, to lower case', function() {
     expect(_String.lowerCase('---Foo-Bar---')).to.equal('foo bar')
   })

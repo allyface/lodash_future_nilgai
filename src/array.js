@@ -68,4 +68,15 @@ export default class _Array {
   static flatten(array) {
     return Array.prototype.concat(...array)
   }
+
+  // _.flattenDeep(array): Recursively flattens array.
+  static flattenDeep(array) {
+    return array.reduce(function(flattenedArr, nestedArr) {
+      return flattenedArr.concat(
+        Array.isArray(nestedArr)
+          ? _Array.flattenDeep(nestedArr)
+          : nestedArr
+      )
+    }, [])
+  }
 }
