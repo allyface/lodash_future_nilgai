@@ -111,3 +111,9 @@ describe('_Array.nth', () => {
     expect(_Array.nth(array, -2)).to.equal('c')
   })
 })
+
+describe.only('_Array.tail', () => {
+  it('Gets all but the first element of array', function() {
+    expect(_Array.tail([1, 2, 3])).to.deep.equal([2, 3])
+  })
+})

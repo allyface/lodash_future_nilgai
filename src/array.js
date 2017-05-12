@@ -94,4 +94,10 @@ export default class _Array {
       return array[n]
     }
   }
+
+  // _.tail(array): Gets all but the first element of array.
+  static tail(array) {
+    array.shift()
+    return array
+  }
 }
