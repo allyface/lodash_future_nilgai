@@ -64,4 +64,8 @@ export default class _Array {
     return values
   }
 
+  // _.flatten(array): Flattens array a single level deep.
+  static flatten(array) {
+    return Array.prototype.concat(...array)
+  }
 }

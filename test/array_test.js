@@ -81,3 +81,9 @@ describe('_Array.concat', () => {
     expect(_Array.concat(array, 2, [3], [[4]])).to.deep.equal([1, 2, 3, [4]])
   })
 })
+
+describe.only('_Array.flatten', () => {
+  it('Flattens array a single level deep.', function() {
+    expect(_Array.flatten([1, [2, [3, [4]], 5]])).to.deep.equal([1, 2, [3, [4]], 5])
+  })
+})

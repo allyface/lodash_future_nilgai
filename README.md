@@ -11,6 +11,7 @@
 - .join
 - .last
 - .concat
+- .flatten
 
 ### math.js
 - .add
@@ -92,7 +93,7 @@ This goal is the sister goal of [Common JS Utility Functions - Underscore](202-C
 - [ ] Tests and correct implementations exist for **32** (not all) utility functions from the Lodash library.
 - [x] Functions are organized into files with the same names as the function groups from Lodash (e.g. "Array", "Collection", "Lang").
 - [x] All code is written with ES2015.
-- [ ] Includes a README listing each method written and which file it is in.
+- [x] Includes a README listing each method written and which file it is in.
 - [x] Code uses a linter and there are no linting errors.
 - [x] Code is well tested and all tests are passing.
 - [x] All dependencies are properly declared in `package.json`.
