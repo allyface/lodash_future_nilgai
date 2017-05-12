@@ -28,15 +28,16 @@
 - .mean
 - .min
 - .multiply
-- .rounded
+- .round
+- .subtract
 
 ### string.js
 - .capitalize
 - .lowerCase
 - .lowerFirst
 - .repeat
-_ .trim
-_ .upperCase
+- .trim
+- .upperCase
 
 # Common JS Utility Functions - Lodash
 
