@@ -15,6 +15,7 @@
 - .flattenDeep
 - .initial
 - .nth
+- .tail
 
 ### math.js
 - .add
