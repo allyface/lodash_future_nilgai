@@ -79,4 +79,10 @@ export default class _Array {
       )
     }, [])
   }
+
+  // _.initial(array): Gets all but the last element of array.
+  static initial(array) {
+    array.pop()
+    return array
+  }
 }
