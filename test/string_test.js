@@ -29,18 +29,18 @@ describe('_String.lowerFirst', () => {
 })
 
 describe('_String.repeat', () => {
-    it('repeats the given string n times', function() {
-      expect(_String.repeat('*', 3)).to.equal('***')
-    })
-    it('repeats the given string x times', function() {
-      expect(_String.repeat('abc', 2)).to.equal('abcabc')
-    })
-    it('repats the given string y times', function() {
-      expect(_String.repeat('abc', 0)).to.equal('')
-    })
+  it('repeats the given string n times', function() {
+    expect(_String.repeat('*', 3)).to.equal('***')
+  })
+  it('repeats the given string x times', function() {
+    expect(_String.repeat('abc', 2)).to.equal('abcabc')
+  })
+  it('repats the given string y times', function() {
+    expect(_String.repeat('abc', 0)).to.equal('')
+  })
 })
 
-describe.only('_String.replace', () => {
+describe('_String.replace', () => {
   it('Replaces matches for pattern in string', function() {
     expect(_String.replace('Hi Fred', 'Fred', 'Barney')).to.equal('Hi Barney')
   })
