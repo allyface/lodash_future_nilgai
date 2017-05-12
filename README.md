@@ -12,6 +12,7 @@
 - .last
 - .concat
 - .flatten
+- .flattenDeep
 
 ### math.js
 - .add

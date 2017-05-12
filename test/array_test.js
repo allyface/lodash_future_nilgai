@@ -82,8 +82,14 @@ describe('_Array.concat', () => {
   })
 })
 
-describe.only('_Array.flatten', () => {
+describe('_Array.flatten', () => {
   it('Flattens array a single level deep.', function() {
     expect(_Array.flatten([1, [2, [3, [4]], 5]])).to.deep.equal([1, 2, [3, [4]], 5])
+  })
+})
+
+describe.only('_Array.flattenDeep', () => {
+  it('Recursively flattens array.', function() {
+    expect(_Array.flattenDeep([1, [2, [3, [4]], 5]])).to.deep.equal([1, 2, 3, 4, 5])
   })
 })
