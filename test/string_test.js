@@ -7,7 +7,7 @@ describe('_String.capitalize', () => {
   })
 })
 
-describe.only('_String.lowerCase', () => {
+describe('_String.lowerCase', () => {
   it('Converts string as space seperated words, to lower case', function() {
     expect(_String.lowerCase('---Foo-Bar---')).to.equal('foo bar')
   })
@@ -55,7 +55,7 @@ describe('_String.trim', () => {
   })
 })
 
-describe.only('_String.upperCase', () => {
+describe('_String.upperCase', () => {
   it('Converts string as space seperated words to uppercase', function() {
     expect(_String.upperCase('---foo-bar---')).to.equal('FOO BAR')
   })
@@ -64,5 +64,14 @@ describe.only('_String.upperCase', () => {
   })
   it('Converts string as space seperated words to uppercase', function() {
     expect(_String.upperCase('___foo_bar___')).to.equal('FOO BAR')
+  })
+})
+
+describe.only('_String.upperFirst', () => {
+  it('Converts first letter of string to uppercase', function() {
+    expect(_String.upperFirst('fred')).to.equal('Fred')
+  })
+  it('Coverts first letter of string to uppercase', function() {
+    expect(_String.upperFirst('FRED')).to.equal('FRED')
   })
 })

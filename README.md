@@ -29,6 +29,8 @@
 - .lowerCase
 - .lowerFirst
 - .repeat
+_ .trim
+_ .upperCase
 
 # Common JS Utility Functions - Lodash
 
