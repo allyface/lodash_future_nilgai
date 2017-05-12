@@ -59,9 +59,13 @@ export default class StringClass {
       }
     }
   }
+
+  // _.upperFirst([string='']): Converts the first character of string to upper case.
   static upperFirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
+
+  // _.toUpper([string='']): Converts string, as a whole, to upper case just like String#toUpperCase.
   static toUpper(string) {
     for(let i = 0; i < string.length; i++) {
       if ((	string.charAt(i) === string.charAt(i).toLowerCase()) &&
