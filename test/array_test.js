@@ -112,8 +112,26 @@ describe('_Array.nth', () => {
   })
 })
 
-describe.only('_Array.tail', () => {
+describe('_Array.tail', () => {
   it('Gets all but the first element of array', function() {
     expect(_Array.tail([1, 2, 3])).to.deep.equal([2, 3])
+  })
+})
+
+describe.only('_Array.take', () => {
+  it('Creates a slice of array with n elements taken from the beginning', function() {
+    expect(_Array.take([1, 2, 3], 2)).to.deep.equal([1, 2])
+  })
+
+  it('Takes 1 as the default value for n', function() {
+    expect(_Array.take([1, 2, 3])).to.deep.equal([1])
+  })
+
+  it('Returns the entire array when n is greater than array length', function() {
+    expect(_Array.take([1, 2, 3], 5)).to.deep.equal([1, 2, 3])
+  })
+
+  it('Returns an empty array when n is equal to 0', function() {
+    expect(_Array.take([1, 2, 3], 0)).to.deep.equal([])
   })
 })
