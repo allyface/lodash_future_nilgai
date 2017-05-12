@@ -87,3 +87,69 @@ describe('_Array.flatten', () => {
     expect(_Array.flatten([1, [2, [3, [4]], 5]])).to.deep.equal([1, 2, [3, [4]], 5])
   })
 })
+
+describe('_Array.flattenDeep', () => {
+  it('Recursively flattens array.', function() {
+    expect(_Array.flattenDeep([1, [2, [3, [4]], 5]])).to.deep.equal([1, 2, 3, 4, 5])
+  })
+})
+
+describe('_Array.initial', () => {
+  it('Gets all but the last element of array', function() {
+    expect(_Array.initial([1, 2, 3])).to.deep.equal([1, 2])
+  })
+})
+
+describe('_Array.nth', () => {
+  let array = ['a', 'b', 'c', 'd']
+
+  it('Gets the element at index n of array', function() {
+    expect(_Array.nth(array, 1)).to.equal('b')
+  })
+
+  it('If n is negative, the nth element from the end is returned', function() {
+    expect(_Array.nth(array, -2)).to.equal('c')
+  })
+})
+
+describe('_Array.tail', () => {
+  it('Gets all but the first element of array', function() {
+    expect(_Array.tail([1, 2, 3])).to.deep.equal([2, 3])
+  })
+})
+
+describe('_Array.take', () => {
+  it('Creates a slice of array with n elements taken from the beginning', function() {
+    expect(_Array.take([1, 2, 3], 2)).to.deep.equal([1, 2])
+  })
+
+  it('Takes 1 as the default value for n', function() {
+    expect(_Array.take([1, 2, 3])).to.deep.equal([1])
+  })
+
+  it('Returns the entire array when n is greater than array length', function() {
+    expect(_Array.take([1, 2, 3], 5)).to.deep.equal([1, 2, 3])
+  })
+
+  it('Returns an empty array when n is equal to 0', function() {
+    expect(_Array.take([1, 2, 3], 0)).to.deep.equal([])
+  })
+})
+
+describe('_Array.takeRight', () => {
+  it('Creates a slice of array with n elements taken from the end', function() {
+    expect(_Array.takeRight([1, 2, 3], 2)).to.deep.equal([2, 3])
+  })
+
+  it('Takes 1 as the default value for n', function() {
+    expect(_Array.takeRight([1, 2, 3])).to.deep.equal([3])
+  })
+
+  it('Returns the entire array when n is greater than array length', function() {
+    expect(_Array.takeRight([1, 2, 3], 5)).to.deep.equal([1, 2, 3])
+  })
+
+  it('Returns an empty array when n is equal to 0', function() {
+    expect(_Array.takeRight([1, 2, 3], 0)).to.deep.equal([])
+  })
+})

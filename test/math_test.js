@@ -86,3 +86,9 @@ describe('_Math.round', () => {
     expect(_Math.round(4060, -2)).to.equal(4100)
   })
 })
+
+describe('_Math.subtract', () => {
+  it('Subtracts two numbers', function() {
+    expect(_Math.subtract(6, 4)).to.equal(2)
+  })
+})

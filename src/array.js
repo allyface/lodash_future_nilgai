@@ -68,4 +68,50 @@ export default class _Array {
   static flatten(array) {
     return Array.prototype.concat(...array)
   }
+
+  // _.flattenDeep(array): Recursively flattens array.
+  static flattenDeep(array) {
+    return array.reduce(function(flattenedArr, nestedArr) {
+      return flattenedArr.concat(
+        Array.isArray(nestedArr)
+          ? _Array.flattenDeep(nestedArr)
+          : nestedArr
+      )
+    }, [])
+  }
+
+  // _.initial(array): Gets all but the last element of array.
+  static initial(array) {
+    array.pop()
+    return array
+  }
+
+  // _.nth(array, [n=0]): Gets the element at index n of array. If n is negative, the nth element from the end is returned.
+  static nth(array, n) {
+    if(Math.sign(n) === -1) {
+      return array[array.length + n]
+    } else {
+      return array[n]
+    }
+  }
+
+  // _.tail(array): Gets all but the first element of array.
+  static tail(array) {
+    array.shift()
+    return array
+  }
+
+  // _.take(array, [n=1]): Creates a slice of array with n elements taken from the beginning.
+  static take(array, n = 1) {
+    return array.slice(0, n)
+  }
+
+  // _.takeRight(array, [n=1]): Creates a slice of array with n elements taken from the end.
+  static takeRight(array, n = 1) {
+    if (n <= array.length) {
+      return array.splice((array.length - n) , n)
+    } else {
+      return array
+    }
+  }
 }

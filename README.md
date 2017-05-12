@@ -12,6 +12,12 @@
 - .last
 - .concat
 - .flatten
+- .flattenDeep
+- .initial
+- .nth
+- .tail
+- .take
+- .takeRight
 
 ### math.js
 - .add
@@ -23,6 +29,7 @@
 - .min
 - .multiply
 - .round
+- .subtract
 
 ### string.js
 - .capitalize
