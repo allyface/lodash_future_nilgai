@@ -51,4 +51,10 @@ export default class _String {
   //     }
   //   }
   // }
+
+  //_.trim([string=''], [chars=whitespace]): Removes leading and trailing whitespace and special characters
+  static trim(string, char) {
+    string = string.replace(/[^a-zA-Z ]/g, '')
+    return string.trim()
+  }
 }

@@ -57,3 +57,12 @@ describe('_String.replace', () => {
 //     expect(_String.snakeCase('---FOO-BAR---')).to.equal('foo_bar')
 //   })
 // })
+
+describe.only('_String.trim', () => {
+  it('removes leading and trailing whitespace from string', function() {
+    expect(_String.trim('   abc   ')).to.equal('abc')
+  })
+  it('Removes trailing and leading characters from a string', function() {
+    expect(_String.trim('-_-abc-_-', '_-')).to.equal('abc')
+  })
+})
