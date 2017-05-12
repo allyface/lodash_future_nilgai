@@ -22,15 +22,16 @@
 - .mean
 - .min
 - .multiply
-- .rounded
+- .round
 
 ### string.js
 - .capitalize
 - .lowerCase
 - .lowerFirst
 - .repeat
-_ .trim
-_ .upperCase
+- .trim
+- .upperCase
+- .upperFirst
 
 # Common JS Utility Functions - Lodash
 

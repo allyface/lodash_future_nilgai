@@ -46,7 +46,7 @@ describe('_String.replace', () => {
   })
 })
 
-describe('_String.trim', () => {
+describe.only('_String.trim', () => {
   it('removes leading and trailing whitespace from string', function() {
     expect(_String.trim('   abc   ')).to.equal('abc')
   })
