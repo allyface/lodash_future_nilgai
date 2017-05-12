@@ -17,6 +17,7 @@
 - .nth
 - .tail
 - .take
+- .takeRight
 
 ### math.js
 - .add

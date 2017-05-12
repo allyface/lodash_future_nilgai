@@ -105,4 +105,13 @@ export default class _Array {
   static take(array, n = 1) {
     return array.slice(0, n)
   }
+
+  // _.takeRight(array, [n=1]): Creates a slice of array with n elements taken from the end.
+  static takeRight(array, n = 1) {
+    if (n <= array.length) {
+      return array.splice((array.length - n) , n)
+    } else {
+      return array
+    }
+  }
 }
