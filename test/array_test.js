@@ -88,8 +88,14 @@ describe('_Array.flatten', () => {
   })
 })
 
-describe.only('_Array.flattenDeep', () => {
+describe('_Array.flattenDeep', () => {
   it('Recursively flattens array.', function() {
     expect(_Array.flattenDeep([1, [2, [3, [4]], 5]])).to.deep.equal([1, 2, 3, 4, 5])
+  })
+})
+
+describe.only('_Array.initial', () => {
+  it('Gets all but the last element of array', function() {
+    expect(_Array.initial([1, 2, 3])).to.deep.equal([1, 2])
   })
 })
