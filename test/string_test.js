@@ -78,7 +78,7 @@ describe('StringClass.upperFirst', () => {
 
 describe('StringClass.toUpper', () => {
   it('Converts string as a whole to uppercase', function() {
-    expect(StringClass.toUpper('---foo-bar-')).to.equal('---FOO-BAR---')
+    expect(StringClass.toUpper('--foo-bar--')).to.equal('--FOO-BAR--')
   })
   it('Convets string as a whole to uppercase', function() {
     expect(StringClass.toUpper('fooBar')).to.equal('FOOBAR')
