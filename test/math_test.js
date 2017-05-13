@@ -93,7 +93,7 @@ describe('MathClass.subtract', () => {
   })
 })
 
-describe.only('MathClass.sum', () => {
+describe('MathClass.sum', () => {
   it('Computes the sum of the values in array', function() {
     expect(MathClass.sum([4, 2, 8, 6])).to.equal(20)
   })
